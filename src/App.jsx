@@ -187,7 +187,7 @@ function App() {
         <TextField label="Company Name" value={companyName} onChange={(e)=>{setCompanyName(e.target.value)}}/>
         <div style={{padding:"20px"}}/>
 
-        <Button variant="contained" sx={{colors:"#00000"}} component="label" onChange={(e)=>{setVideo(e.target.files[0])}}>
+        <Button variant="contained" sx={{background:"#202630"}} component="label" onChange={(e)=>{setVideo(e.target.files[0])}}>
           Upload Video
           <input type="file" hidden/>
         </Button>
@@ -202,6 +202,7 @@ function App() {
           variant="contained"
           component="label"
           onChange={(e)=>{setFrontImage(e.target.files[0])}}
+          sx={{background:"#202630"}}
         >
           Company Image
           <input type="file" hidden/>
@@ -228,6 +229,8 @@ function App() {
           variant="contained"
           component="label"
           onChange={(e)=>{setFounderImage(e.target.files[0])}}
+          sx={{background:"#202630"}}
+
         >
           Founder Image
           <input type="file" hidden/>
@@ -238,6 +241,7 @@ function App() {
           variant="contained"
           component="label"
           onChange={(e)=>{setDataImage(e.target.files[0])}}
+          sx={{background:"#202630"}}
         >
         Data Image
         <input type="file" hidden/>
@@ -245,24 +249,19 @@ function App() {
         <div style={{padding:"20px"}}/>
         
         <Stack direction={"row"} sx={{display:"flex" }}>
-          <Typography varient="p">Industries</Typography>
+          <Typography varient="h5" sx={{fontWeight:"10px"}}>Industries</Typography>
         </Stack>
-        <Stack direction={'row'} sx={{display:"flex", justifyContent:"space-between"}}>
+        <Stack direction={'row'} sx={{display:"flex", flexWrap:"wrap"}}>
           <FormControlLabel control={<Checkbox  onChange={()=>{checkBox(0)}}/>} label="Technology" />
           <FormControlLabel control={<Checkbox  onChange={()=>{checkBox(1)}}/>} label="Healthcare" />
           <FormControlLabel control={<Checkbox  onChange={()=>{checkBox(2)}}/>} label="Financial Services" />
           <FormControlLabel control={<Checkbox  onChange={()=>{checkBox(3)}}/>} label="Energy" />
-        </Stack>
-        <Stack direction={'row'} sx={{display:"flex", justifyContent:"space-between"}}>
           <FormControlLabel control={<Checkbox  onChange={()=>{checkBox(4)}}/>} label="Consumer Goods" />
           <FormControlLabel control={<Checkbox  onChange={()=>{checkBox(5)}}/>} label="Real Estate" />
           <FormControlLabel control={<Checkbox  onChange={()=>{checkBox(6)}}/>} label="Transportation & Logistics" />
-        </Stack>
-        <Stack direction={'row'} sx={{display:"flex", justifyContent:"space-between"}}>
           <FormControlLabel control={<Checkbox  onChange={()=>{checkBox(9)}}/>} label="Telecommunications" />
           <FormControlLabel control={<Checkbox  onChange={()=>{checkBox(7)}}/>} label="Agriculture & Food Production" />
           <FormControlLabel control={<Checkbox  onChange={()=>{checkBox(8)}}/>} label="Manufacturing" />
-
         </Stack>
         <div style={{padding:"20px"}}/>
 
